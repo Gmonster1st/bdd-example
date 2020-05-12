@@ -10,7 +10,7 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         strict = false,
         monochrome = false,
-        plugin = {"json:target/cucumber-report.json", "pretty",
+        plugin = {"json:target/cucumber.json", "pretty",
                 "html:target/cucumber-html-report", "junit:target/cucumber-junit-report.xml"},
         features = {"src/test/resources/features/"},
         tags = {"@UI and not @Manual"},
