@@ -4,7 +4,7 @@ Feature: Contacts
   Background:
     Given the Demo Application is opened
 
-  @UI @Product @TC-UI-CON-001
+  @UI @Product @TC-UI-CON-001 @DX-1
   Scenario Outline: Tests the valid addition of a Contact
     When the user navigates to "Add New Contact" page
     And the user adds a new contact with "valid" data
@@ -17,7 +17,7 @@ Feature: Contacts
       | Contact 001 | Address 001 | Athens       | 2101111111 | email001@intrasoft-intl.com | enabled | male   |
       | Contact 002 |             | Thessaloniki |            | email002@intrasoft-intl.com |         |        |
 
-  @UI @Product @TC-UI-CON-002
+  @UI @Product @TC-UI-CON-002 @DX-2
   Scenario Outline: Tests the invalid addition of a Contact
     When the user navigates to "Add New Contact" page
     And the user adds a new contact with "invalid" data
@@ -31,7 +31,7 @@ Feature: Contacts
       | invalidContact |         |              |       | invalidContact@intrasoft-intl.com |        |        |
       | invalidContact |         | Thessaloniki |       |                                   |        |        |
 
-  @UI @Product @TC-UI-CON-003
+  @UI @Product @TC-UI-CON-003 @DX-3
   Scenario: Tests the Contact view
     When the user navigates to "Contact List" page
     And the user selects the contact "Contact 001" to "view"
@@ -39,7 +39,7 @@ Feature: Contacts
       | Name        | Address     | City   | Phone      | Email                       | Status  | Gender |
       | Contact 001 | Address 001 | Athens | 2101111111 | email001@intrasoft-intl.com | enabled | male   |
 
-  @UI @Product @TC-UI-CON-004
+  @UI @Product @TC-UI-CON-004 @DX-4
   Scenario Outline: Tests the Contact update
     When the user navigates to "Contact List" page
     And the user selects the contact "Contact 002" to "edit"
@@ -54,7 +54,7 @@ Feature: Contacts
       | Name         | Address      | City         | Phone      | Email                        | Status   | Gender |
       | Contact 002a | Address 002a | Thessaloniki | 2102222222 | email002a@intrasoft-intl.com | disabled | female |
 
-  @UI @Product @TC-UI-CON-005
+  @UI @Product @TC-UI-CON-005 @DX-5
   Scenario: Tests the Contact delete
     When the user navigates to "Contact List" page
     And the user selects the contact "Contact 001" to "delete"
