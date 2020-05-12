@@ -33,6 +33,9 @@ public class Edge  {
         System.setProperty("browser", "edge");
         System.setProperty("webdriver.edge.driver", ResourcesConfig.getEdgeDriver());
         EdgeOptions options = new EdgeOptions();
+        if (SysConfig.getHeadlessMode()) {
+            options.setCapability("headless", true);
+        }
         options.setCapability(InternetExplorerDriver.INTRODUCE_FLAKINESS_BY_IGNORING_SECURITY_DOMAINS, true);
         //options.setCapability("download.default_directory", Resources.getOutputDir());
         options.setCapability("browser.download.dir", ResourcesConfig.getOutputDir());

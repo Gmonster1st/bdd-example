@@ -32,6 +32,9 @@ public class Firefox {
         System.setProperty("webdriver.gecko.driver", ResourcesConfig.getFirefoxDriver());
         FirefoxOptions options = new FirefoxOptions();
         options.setProfile(getFirefoxProfile());
+        if (SysConfig.getHeadlessMode()) {
+            options.setHeadless(true);
+        }
         options.setCapability(CapabilityType.ACCEPT_SSL_CERTS, true);
         options.setCapability(CapabilityType.ACCEPT_INSECURE_CERTS, true);
         String binaryVersion = System.getProperty("webdriver.firefox.binary.version");

@@ -43,6 +43,9 @@ public class Chrome {
         ChromeOptions options = new ChromeOptions();
         options.setExperimentalOption("prefs", chromePrefs);
         options.addArguments("lang=en");
+        if (SysConfig.getHeadlessMode()) {
+            options.addArguments("headless");
+        }
         options.addArguments("start-maximized"); // open Browser in maximized mode
         options.addArguments("disable-infobars"); // disabling infobars
         options.addArguments("--disable-extensions"); // disabling extensions

@@ -29,6 +29,10 @@ public class SysConfig {
         return getProperty("timeout");
     }
 
+    public static Boolean getHeadlessMode() {
+        return Boolean.parseBoolean(getProperty("headless.mode"));
+    }
+
     private static String getProperty(String propertyName) {
         if (System.getProperty(propertyName) == null) {
             return SysConfig.getPomProperty(propertyName);

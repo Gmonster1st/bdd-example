@@ -11,6 +11,7 @@
         <driver.remote.url></driver.remote.url>
         <environment>prefat</environment>
         <timeout>15</timeout>
+        <headless.mode>false</headless.mode>
 
         <cucumber.version>4.3.0</cucumber.version>
         <selenium.version>3.141.59</selenium.version>
@@ -69,6 +70,10 @@
                         <property>
                             <name>timeout</name>
                             <value>${timeout}</value>
+                        </property>
+                        <property>
+                            <name>headless.mode</name>
+                            <value>${headless.mode}</value>
                         </property>
                     </systemProperties>
                     <testFailureIgnore>true</testFailureIgnore>
