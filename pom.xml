@@ -80,7 +80,6 @@
                     <includes>
                         <include>com/intrasoft/stsc/runners/RunCukeTest.java</include>
                     </includes>
-                    <testFailureIgnore>true</testFailureIgnore>
                 </configuration>
             </plugin>
             <plugin>
