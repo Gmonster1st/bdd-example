@@ -14,6 +14,8 @@ public class EnvDataConfig {
         return getEnvProperties().getProperty("app.url");
     }
 
+    public static String getAPIURL() { return getEnvProperties().getProperty("appAPI.url"); }
+
     private static Properties getEnvProperties() {
         return getProperties(loadProperties(ResourcesConfig.getEnvironmentProperties(SysConfig.getEnvironment())));
     }
